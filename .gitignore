@@ -1,0 +1,12 @@
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
+.nuxt-storybook
+storybook-static
+yarn.lock
+package-lock.json
