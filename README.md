@@ -1,6 +1,12 @@
 # Nuxt 3 Boilerplate
 
 
+About:
+- Tailwind CSS
+- Storybook
+- TypeScript support
+- i18n
+
 ## Setup
 
 Make sure to install the dependencies:
