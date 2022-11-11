@@ -10,3 +10,7 @@ dist
 storybook-static
 yarn.lock
 package-lock.json
+.idea
+
+yarn.lock
+package-lock.json
