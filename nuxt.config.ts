@@ -23,4 +23,12 @@ export default defineNuxtConfig({
       },
     ],
   ],
+  runtimeConfig: {
+    public: {
+      baseURL: "localhost",
+    },
+  },
+  router: {
+    scrollBehavior: () => ({ x: 0, y: 0, behavior: 'smooth' }),
+  },
 })
