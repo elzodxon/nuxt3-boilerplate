@@ -1,6 +1,6 @@
 module.exports = {
   purge: [
-    './components/**/*.{vue,js}',
+    './components/**/*.{vue,js,ts}',
     './layouts/**/*.vue',
     './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        red: '#000',
+        red: '#FF0000',
       },
     },
   },

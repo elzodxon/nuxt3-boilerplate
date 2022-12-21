@@ -7,9 +7,8 @@
 </template>
 
 <script setup>
-import '@/assets/styles/main.css'
 import { useRoute } from 'vue-router'
-import {onMounted} from 'vue'
+import { onMounted } from 'vue'
 const route = useRoute()
 
 if ('setup' in route.query) {
