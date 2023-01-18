@@ -5,13 +5,6 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     [
-      '@nuxtjs/eslint-module',
-      {
-        threads: true,
-      },
-    ],
-    '@nuxtjs/stylelint-module',
-    [
       '@pinia/nuxt',
       {
         autoImports: [
@@ -28,7 +21,11 @@ export default defineNuxtConfig({
       baseURL: "localhost",
     },
   },
-  router: {
-    scrollBehavior: () => ({ x: 0, y: 0, behavior: 'smooth' }),
+  devServerHandlers: [],
+  nitro: {
+    serveStatic: true,
   },
+  experimental:{
+    payloadExtraction: false
+  }
 })

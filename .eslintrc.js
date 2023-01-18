@@ -1,38 +1,35 @@
 module.exports = {
   root: true,
   env: {
-    browser: true,
     node: true,
-  },
-  parserOptions: {
-    parser: 'babel-eslint',
-  },
-  settings: {
-    'import/resolver': {
-      alias: [['~', './']],
-    },
+    es2021: true,
+    "vue/setup-compiler-macros": true,
   },
   extends: [
-    '@nuxtjs/eslint-config-typescript',
-    'prettier',
-    'prettier/vue',
-    'plugin:prettier/recommended',
-    'plugin:nuxt/recommended',
+    "eslint:recommended",
+    "plugin:vue/vue3-essential",
+    "plugin:storybook/recommended",
+    "plugin:markdown/recommended",
   ],
-  plugins: ['prettier'],
-  globals: { _: true },
-  // add your custom rules here
-  // 0 -> disabled
-  // 1 -> warn
-  // 2 -> error
-  rules: {
-    'space-before-function-paren': 0,
-    'vue/no-v-html': 0,
-    'no-console': 0,
-    'vue/require-prop-types': 2,
-    'vue/require-prop-type-constructor': 2,
-    'vue/require-default-prop': 2,
-    'vue/prop-name-casing': 2,
-    'vue/order-in-components': 2,
+  parserOptions: {
+    ecmaVersion: 2020,
   },
-}
+  plugins: ["simple-import-sort", "import"],
+  rules: {
+    "no-console": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    eqeqeq: "off",
+    curly: "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "@typescript-eslint/no-this-alias": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "no-prototype-builtins": "off",
+    "vue/multi-word-component-names": "off"
+  },
+};

@@ -7,8 +7,9 @@
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router'
 import { onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+
 const route = useRoute()
 
 if ('setup' in route.query) {
@@ -19,7 +20,6 @@ if ('mounted' in route.query) {
     throw new Error('error in mounted')
   })
 }
-function triggerError () {
-  throw new Error('manually triggered error')
-}
+
 </script>
+  
