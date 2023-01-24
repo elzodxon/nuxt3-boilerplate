@@ -8,9 +8,8 @@ node_modules
 dist
 .nuxt-storybook
 storybook-static
-yarn.lock
-package-lock.json
 .idea
 
 yarn.lock
 package-lock.json
+pnpm-lock.yaml
