@@ -11,16 +11,11 @@
     "lint:js:fix": "eslint --fix --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style:fix": "stylelint \"**/*.{vue,css}\" --fix --ignore-path .gitignore",
     "lint": "yarn lint:js && yarn lint:style",
-    "storybook": "start-storybook -p 6006",
     "prepare": "husky install"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",
-    "@storybook/addon-essentials": "^6.3.12",
-    "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/vue3": "^6.3.12",
     "nuxt": "^3.2.0",
-    "storybook-builder-vite": "^0.1.5",
     "vue-gtag-next": "^1.14.0",
     "vue-i18n": "^9.2.2",
     "eslint": "8.22.0",
