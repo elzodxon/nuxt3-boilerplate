@@ -1,11 +1,18 @@
 <template>
-  <div>
-    <div class="bg-red text-white">Index page</div>
-    <h1>
-      <a target="_blank" class="text-blue-500" href="https://github.com/elzodxon/nuxt3-boilerplate">https://github.com/elzodxon/nuxt3-boilerplate</a>
-    </h1>
-
-    <h2>{{ $t('hello') }}</h2>
-  </div>
+  <BeerList v-bind="{beers}" :items-per-page="10" />
 </template>
 
+<script setup lang="ts">
+
+import {useApi} from "~/composables/useApi";
+
+const { data: beers, error, refresh } = await useAsyncData(
+    'beers',
+    () => useApi().get('/v2/beers', {
+      params:{
+          brewed_after: '11-2012'
+      }
+    })
+)
+
+</script>
